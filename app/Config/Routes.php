@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 // Route since we don't have to scan directories.
 
 $routes->get('/', 'SendMail::index');
+$routes->match(['get', 'post'], 'SendMail/sendMail', 'SendMail::sendMail');
 
 /**
  * --------------------------------------------------------------------
